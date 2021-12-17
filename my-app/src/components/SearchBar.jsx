@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import {getCity} from '../redux/actions'
 
-function SearchBar({cities, getCity}) {
+function SearchBar({found, getCity}) {
   const [city, setCity] = useState("");
+
+  useEffect(() => {
+    if (found === 'repeat') alert('It already exists')
+    if (found === 'notFound') alert('Result not found')
+  }, [found])
 
   function handleOnChange(e) {
     e.preventDefault()
@@ -12,7 +17,8 @@ function SearchBar({cities, getCity}) {
 
   function handleSubmit(e) {
     e.preventDefault()
-    getCity(city) 
+    getCity(city)
+
   }
 
   return (
@@ -31,7 +37,7 @@ function SearchBar({cities, getCity}) {
 
 function mapStateToProps (state) {
   return {
-    cities: state.cities
+    found: state.found
   }
 }
 

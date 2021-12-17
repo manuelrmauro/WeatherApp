@@ -23,14 +23,13 @@ export const getCity = function (name = '') {
 						longitud: recurso.coord.lon,
 					};
 					dispatch({type:GET_CITY, payload: city})
-          return city
 				} else {
-          return undefined
+					dispatch({type:GET_CITY, payload: null})
 				}
 			});
 	};
 };
 
-export const deleteCity = function (cityName) {
-  return {type: DELETE_CITY, payload: cityName}
+export const deleteCity = function (cityId) {
+  return {type: DELETE_CITY, payload: cityId}
 }
