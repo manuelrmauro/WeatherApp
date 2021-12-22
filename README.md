@@ -8,12 +8,7 @@ Link to app: https://weather-app-32c2b.web.app/ciudad/3435910
 
 ### Description
 
-App for searching and creating food recipes. Build with JavaScript, Node, React, Redux, CSS, Express, Sequelize. 
-
-### Objective
-
-In this App you can search existing recipes brought from an external api. The search can be filtered by diet, and can be ordered alphabetically and by score.
-Also you can create new recipes.
+App that is used to see the weather of any part of the world, in real time.
 
 ### How to open
 
