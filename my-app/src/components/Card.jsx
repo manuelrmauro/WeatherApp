@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 export default function Card({ min, max, name, img, onClose, id }) {
 	return (
 		<div className="card">
-			<Link to={`/ciudad/${id}`} className="cardBtn">
 				<div id="closeIcon" className="row">
 					<button onClick={onClose} className="btn btn-sm btn-danger">
 						X
 					</button>
 				</div>
+			<Link to={`/ciudad/${id}`} className="cardBtn">
 				<div className="card-body">
 					<h5 className="card-title">{name}</h5>
 
