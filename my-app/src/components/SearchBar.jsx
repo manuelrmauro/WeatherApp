@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
+import { useHistory } from "react-router-dom";
 import {getCity} from '../redux/actions'
+import './SearchBar.css'
 
 function SearchBar({found, getCity}) {
   const [city, setCity] = useState("");
+  const history = useHistory()
 
   useEffect(() => {
-    if (found === 'repeat') alert('It already exists')
-    if (found === 'notFound') alert('Result not found')
+    if (found === 'repeat') alert('City already exists in your list')
+    if (found === 'notFound') alert('City not found')
   }, [found])
 
   function handleOnChange(e) {
@@ -18,7 +21,8 @@ function SearchBar({found, getCity}) {
   function handleSubmit(e) {
     e.preventDefault()
     getCity(city)
-
+    setCity('')
+    history.push('/home')
   }
 
   return (
@@ -29,6 +33,7 @@ function SearchBar({found, getCity}) {
         placeholder="City..."
         value={city}
         onChange={e => handleOnChange(e)}
+        className='input'
       />
       <input type="submit" value="Add" />
     </form>

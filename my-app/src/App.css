@@ -6,3 +6,8 @@
   display: flex;
   justify-content: center;
 }
+
+body {
+  background-image: url('../public/background.jpg') ;
+  background-size:100%;
+}

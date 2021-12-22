@@ -12,9 +12,29 @@
   justify-content: flex-end;
   margin-right: 8px;
   margin-top: 8px;
+  z-index: 999;
 }
 
 .card-body {
   margin-top: 0px !important;
   padding-top: 0px !important;
+}
+
+.card a {
+  color: #555555;
+  text-decoration: none;
+}
+.temp {
+  width: 80px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: 200ms;
+  z-index: 998;
+}
+
+
+.card:hover {
+  background-color: rgba(255, 255, 255, 0.8);
 }

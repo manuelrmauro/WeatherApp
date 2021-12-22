@@ -19,7 +19,7 @@ function Cards({cities, deleteCity}) {
           name={c.name}
           img={c.img}
           onClose={() => handleOnClose(c.id)} 
-        />):'Search your cities...'}
+        />):<p className='text'>Search your cities...</p>}
     </div> 
   );
 }

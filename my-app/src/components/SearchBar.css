@@ -1,0 +1,12 @@
+
+@media (max-width: 405px) {
+  .input {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 360px) {
+  .input {
+    width: 30vw;
+  }
+}
