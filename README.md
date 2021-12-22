@@ -1,6 +1,6 @@
 # Weather App
 
-Link to app: https://weather-app-32c2b.web.app/ciudad/3435910
+Link to app: https://weather-app-32c2b.web.app/
 
 Link to video: https://vimeo.com/659396511
 
