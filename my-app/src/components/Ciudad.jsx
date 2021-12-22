@@ -9,7 +9,6 @@ function Ciudad({ id, cities }) {
 
 	useEffect(() => {
 		const cityData = cities.find((elem) => parseInt(id) === elem.id);
-		console.log(cityData);
 		setCity(cityData);
 	}, []);
 

@@ -4,7 +4,7 @@ export const DELETE_CITY = 'DELETE_CITY'
 export const getCity = function (name = '') {
 	return function (dispatch) {
 		fetch(
-			`http://api.openweathermap.org/data/2.5/weather?q=${name}&appid=4ae2636d8dfbdc3044bede63951a019b`
+			`https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=4ae2636d8dfbdc3044bede63951a019b`
 		)
 			.then((r) => r.json())
 			.then((recurso) => {
